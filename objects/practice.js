@@ -146,11 +146,15 @@ methodCollection.logHello();
   Return a new object with all of the information that you passed in.
 */
 
-// function makePerson(name, birthday, ssn) {
-//   this.name = name;
-//   this.birthday = birthday;
-//   this.ssn = ssn;
-// };
+function makePerson(name, birthday, ssn) {
+  return {
+    name: name, 
+    birdthday: birthday,
+    ssn: ssn
+  }
+};
+
+makePerson("Rich", "Feb 8th", 123);
 
 ////////// PROBLEM 7 //////////
 
@@ -159,11 +163,12 @@ methodCollection.logHello();
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-// function makeCard(cardNumber, expirationDate, securityCode) {
-//   this.cardNumber = cardNumber;
-//   this.expirationDate = expirationDate;
-//   this.securityCode = securityCode;
-// }
+function makeCard(cardNumber, expirationDate, securityCode) {
+  return {
+    cardNumber: cardNumber, 
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
+};
 
-// makeCard(12345, 0208, 123);
 

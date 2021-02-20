@@ -128,14 +128,14 @@ function divider(numbersArray) {
   let evenArr = []
   let oddArr = []
   for (let i = 0; i < numbersArray.length; i++) {
+    console.log(i)
     numbersArray[i] % 2 === 0 ? evenArr.push(numbersArray[i]) : oddArr.push(numbersArray[i])
-    // console.log(evenArr)
-    // console.log(oddArr)
   }
-  let newArr = [[evenArr], [oddArr]]
+  // console.log(evenArr)
+  // console.log(oddArr)
+  let newArr = [evenArr, oddArr]
   // console.log(newArr)
   return newArr
-
 }
 
 
@@ -158,9 +158,16 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
-
-
+function finder(arr) {
+  let randomNumber = getRandomArbitrary()
+  for (let i = 0; i < arr.length-1; i++) {
+    if (arr[i] === randomNumber) {
+      return true 
+    } else {
+      return false
+    }
+  }
+};
 
 ////////// PROBLEM 8 //////////
 
@@ -197,7 +204,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+function maker() {
+  let newArr = []
+  for (let i = 1; i <= 215; i++) {
+    newArr.push(i) }
+  return newArr
+};
+
 
 
 

@@ -148,9 +148,9 @@ methodCollection.logHello();
 
 function makePerson(name, birthday, ssn) {
   return {
-    name: name, 
-    birdthday: birthday,
-    ssn: ssn
+    name,
+    birthday,
+    ssn
   }
 };
 

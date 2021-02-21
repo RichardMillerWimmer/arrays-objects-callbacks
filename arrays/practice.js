@@ -128,7 +128,7 @@ function divider(numbersArray) {
   let evenArr = []
   let oddArr = []
   for (let i = 0; i < numbersArray.length; i++) {
-    console.log(i)
+    // console.log(i)
     numbersArray[i] % 2 === 0 ? evenArr.push(numbersArray[i]) : oddArr.push(numbersArray[i])
   }
   // console.log(evenArr)
@@ -160,13 +160,12 @@ var getRandomArbitrary = function() {
 
 function finder(arr) {
   let randomNumber = getRandomArbitrary()
-  for (let i = 0; i < arr.length-1; i++) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr[i] === randomNumber) {
       return true 
-    } else {
-      return false
-    }
+    } 
   }
+  return false
 };
 
 ////////// PROBLEM 8 //////////
@@ -194,7 +193,27 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(myGroceryList, item) {
+  let newGroceryList = myGroceryList
+  if (!myGroceryList || !item){
+    return []
+  } else {
+    for (let i = 0; i < myGroceryList.length; i++) {
+      if (item == myGroceryList[i]) {
+        newGroceryList.splice(i, 1);
+      } 
+    }
+  }return newGroceryList
+};
+
+function addItem(myGroceryList, item) {
+  if (!myGroceryList || !item){
+    return []
+  } else {
+    myGroceryList.push(item)
+    return myGroceryList
+  }
+};
 
 
 
@@ -226,7 +245,15 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   Your output should look like this -> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+function addTen(numbers) {
+  let newArr = []
+  for (let i = 0; i < numbers.length; i++) {
+    let placeHolder = Number(numbers[i])
+    newArr.push(placeHolder + 10)
+  }
+  // console.log(newArr)
+  return newArr
+};
 
 
 
@@ -251,7 +278,15 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
+function longer(arr1, arr2) {
+  if (arr1.length > arr2.length) {
+    // console.log(arr1)
+    return arr1
+  } else if (arr1.length < arr2.length) {
+    // console.log(arr2)
+    return arr2
+  }
+};
 
 
 
@@ -263,7 +298,17 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2) {
+  let newArray = []
+  for (let i = 0; i < arr1.length; i++) {
+    for (let j = 0; j < arr2.length; j++) {
+      if (arr1[i] === arr2[j]) {
+        newArray.push(arr1[i])
+      }
+    }
+  }
+  return newArray
+};
 
 
 
@@ -325,7 +370,7 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
+let users = [];
 
 
 
